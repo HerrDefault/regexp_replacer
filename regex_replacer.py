@@ -19,7 +19,6 @@ def read_regexp(file=regex_file):
             re_list = list(csv.reader(f, delimiter=';', quotechar='|'))
     except FileNotFoundError:
         print("invalid regex file")
-        raise
         exit(1)
 
     return re_list
@@ -32,7 +31,6 @@ def read_input(file = input_file):
             input_str = f.read()
     except FileNotFoundError:
         print("invalid input file")
-        raise
         exit(1)
 
     return input_str
